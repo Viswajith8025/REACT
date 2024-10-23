@@ -1,0 +1,38 @@
+.heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .child {
+    flex: 33%;
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 20px;
+  }
+
+  .child:hover {
+    background-color: lightgray;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .child {
+      flex: 50%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .child {
+      flex: 100%;
+    }
+  }
