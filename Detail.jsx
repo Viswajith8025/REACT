@@ -22,17 +22,29 @@ export const Detail = () => {
   }, [id]);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-8 flex flex-col items-center text-center bg-gray-100 rounded-lg shadow-lg">
       <img
         src={data.Poster || "https://via.placeholder.com/300x450?text=No+Image"}
         alt={data.Title || "No title"}
-        className="w-full h-auto object-cover"
+        className="w-60 h-auto object-cover rounded-md shadow-md mb-6"
       />
-      <h2 className="text-3xl font-bold my-4">{data.Title || "No title available"}</h2>
-      <p><strong>Awards:</strong> {data.Awards || "N/A"}</p>
-      <p><strong>Year:</strong> {data.Year || "N/A"}</p>
-      <p><strong>Rated:</strong> {data.Rated || "N/A"}</p>
-      <p><strong>Released:</strong> {data.Released || "N/A"}</p>
+      <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
+        {data.Title || "No title available"}
+      </h2>
+      <div className="bg-white p-6 rounded-lg shadow-inner text-left">
+        <p className="text-lg text-gray-700 mb-2">
+          <strong>Awards:</strong> {data.Awards || "N/A"}
+        </p>
+        <p className="text-lg text-gray-700 mb-2">
+          <strong>Year:</strong> {data.Year || "N/A"}
+        </p>
+        <p className="text-lg text-gray-700 mb-2">
+          <strong>Rated:</strong> {data.Rated || "N/A"}
+        </p>
+        <p className="text-lg text-gray-700 mb-2">
+          <strong>Released:</strong> {data.Released || "N/A"}
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onedigit</title>
+</head>
+<body>
+    <script>
+       let num = parseInt(prompt("Enter a number:"), 10);
+
+while (num >= 10) {
+    num = num.toString().split('').reduce((sum, digit) => sum + parseInt(digit), 0);
+}
+
+alert("Output is: " + num);
+
+
+
+           
+            
+        
+    </script>
+</body>
+</html>
