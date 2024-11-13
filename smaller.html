@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smaller</title>
+</head>
+<body>
+    <script>
+       const nums = [6, 5, 4, 8];
+const result = new Array(nums.length);
+
+for (let i = 0; i < nums.length; i++) {
+    let count = 0;
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] < nums[i]) {
+            count++;
+        }
+    }
+    result[i] = count; 
+}
+
+console.log(result);
+alert(result);
+    </script>
+</body>
+</html>

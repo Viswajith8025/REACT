@@ -26,6 +26,17 @@ import { WeatherApp } from "./Weather";
 import { Formset } from "./Form";
 import Key from "./Key";
 import UserRole from "./Rendering/UserRole";
+import {File} from "./Rendering/File";
+import { Themeprovider}  from "./Rendering/ThemeProvider";
+import Calculator from "./Calculator";
+import TodoApp from "./Todoapp";
+import Countt from "./Rendering/Countt";
+import { Provider } from "react-redux";
+import Store from "./Redux/Store";
+import Counter from "./Redux/Counter";
+import  { Shoekart } from "./Redux/Shoekart";
+import Viewcart from "./Redux/Viewcart";
+
 
 
 
@@ -33,8 +44,11 @@ import UserRole from "./Rendering/UserRole";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Provider store={Store}>
+      
+    
     <BrowserRouter>
-      <Routes>
+      <Routes> 
         <Route path="/new" element={<New />}></Route>
         <Route path="/task2" element={<Work1 />}></Route>
         <Route path="/home" element={<HomePage />}></Route>
@@ -57,10 +71,22 @@ root.render(
         <Route path="/form" element={<Formset/>}></Route>
         <Route path="/key" element={<Key/>}></Route>
         <Route path="/userrole" element={<UserRole/>}></Route>
+        <Route path="/themeprovider" element={<Themeprovider/>}></Route>
+        <Route path="/calculator" element={<Calculator/>}></Route>
+        <Route path="/todoapp" element={<TodoApp/>}></Route>
+        <Route path="/countt" element={<Countt/>}></Route>
+        <Route path="/cart" element={<Viewcart/>}></Route>
+        <Route path="/shoekart" element={<Shoekart/>}></Route>
 
 
-      </Routes>
-    </BrowserRouter>
+
+      </Routes> 
+      </BrowserRouter>
+      </Provider>
+    {/* </BrowserRouter> */}
+    {/* <Themeprovider>
+      <File></File>
+    </Themeprovider> */}
   </React.StrictMode>
 );
 
